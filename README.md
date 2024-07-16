@@ -14,7 +14,10 @@ be installed `zig` and `node` for treesitter support.
 - `git`: Version control.
 - `sudo`: Sudo for windows.
 - `eza`: Ls but in Rust.
+- `komorebi`: Tilling window management for windows.
+- `autohotkey`: Automate scripts and bind to keybinds.
 
 Additionally, through the windows store I install:
 
-- [Power Toys](https://github.com/microsoft/PowerToys): Windows system utilities for power users.
+- [Power Toys](https://github.com/microsoft/PowerToys): Windows system
+utilities for power users.
