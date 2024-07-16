@@ -1,5 +1,5 @@
 ; ===== Execute applications ===== ;
-#Enter::Run "alacritty.exe"
+#Enter::Run "powershell.exe"
 
 ; ===== Komorebi commands ===== ;
 Komorebic(cmd) {
@@ -13,29 +13,17 @@ Komorebic("start")
 ; Quit window
 #q::Komorebic("close")
 
-; Remove Win + L keybind for locking the workstation
-RegWrite 1, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System", "DisableLockWorkstation"
-
 ; Focus windows
 #h::Komorebic("focus left")
 #j::Komorebic("focus down")
 #k::Komorebic("focus up")
 #l::Komorebic("focus right")
 
-; Lock screen
-#+x:: {
-  ; re-enable locking workstation, then lock it
-  RegWrite 0, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System", "DisableLockWorkstation"
-  DllCall("LockWorkStation")
-  Reload
-}
-
 ;;!+[::Komorebic("cycle-focus previous")
 ;;!+]::Komorebic("cycle-focus next")
 
 ; Move windows
 #+h::Komorebic("move left")
-
 #+j::Komorebic("move down")
 #+k::Komorebic("move up")
 #+l::Komorebic("move right")
@@ -62,7 +50,6 @@ RegWrite 1, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVe
 
 ; Window manager options
 !+r::Komorebic("retile")
-!p::Komorebic("toggle-pause")
 
 ; Workspaces
 #1::Komorebic("focus-workspace 0")
