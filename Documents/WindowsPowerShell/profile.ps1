@@ -111,3 +111,16 @@ function prompt {
 
 # Configuration home for komorebi
 $Env:KOMOREBI_CONFIG_HOME = 'C:\Users\juancard\.config\komorebi'
+
+# ===== Color Scheme Configuration (ColorTool + Dracula) ===== #
+# Dracula readline configuration. Requires version 2.0, if you have 1.2 convert to `Set-PSReadlineOption -TokenType`
+Set-PSReadlineOption -Color @{
+    "Command" = [ConsoleColor]::Green
+    "Parameter" = [ConsoleColor]::Gray
+    "Operator" = [ConsoleColor]::Magenta
+    "Variable" = [ConsoleColor]::White
+    "String" = [ConsoleColor]::Yellow
+    "Number" = [ConsoleColor]::Blue
+    "Type" = [ConsoleColor]::Cyan
+    "Comment" = [ConsoleColor]::DarkCyan
+}
