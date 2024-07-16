@@ -61,5 +61,12 @@
         }
       ]
     }
+  ],
+  "float_rules": [
+    {
+      "id": "PowerToys.PowerLauncher.exe",
+      "kind": "Exe",
+      "matching_strategy": "Equals"
+    }
   ]
 }
