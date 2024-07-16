@@ -16,6 +16,7 @@ be installed `zig` and `node` for treesitter support.
 - `eza`: Ls but in Rust.
 - `komorebi`: Tilling window management for windows.
 - `autohotkey`: Automate scripts and bind to keybinds.
+- `unzip`: Unzip utility.
 
 Additionally, through the windows store I install:
 
