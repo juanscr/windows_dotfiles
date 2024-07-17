@@ -98,13 +98,13 @@ function Write-BranchName () {
 		return
 	}
 
-	Write-Host "($branch) " -ForegroundColor "blue" -NoNewline
+	Write-Host "($branch) " -ForegroundColor "green" -NoNewline
 }
 
 function prompt {
     Write-BranchName
     $path = "$($executionContext.SessionState.Path.CurrentLocation) "
-    Write-Host $path -NoNewline -ForegroundColor "green"
+    Write-Host $path -NoNewline -ForegroundColor "blue"
     $userPrompt = "$('>') "
     return $userPrompt
 }
