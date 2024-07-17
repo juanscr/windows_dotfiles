@@ -9,7 +9,7 @@ Komorebic(cmd) {
 Komorebic("start")
 
 ; Scratchpad
-!m::Komorebic("minimize")
+#^s::Komorebic("minimize")
 
 ; Quit window
 #q::Komorebic("close")
@@ -20,9 +20,6 @@ Komorebic("start")
 #k::Komorebic("focus up")
 #l::Komorebic("focus right")
 
-;;!+[::Komorebic("cycle-focus previous")
-;;!+]::Komorebic("cycle-focus next")
-
 ; Move windows
 #+h::Komorebic("move left")
 #+j::Komorebic("move down")
@@ -30,27 +27,17 @@ Komorebic("start")
 #+l::Komorebic("move right")
 
 ; Stack windows
-!Left::Komorebic("stack left")
-!Down::Komorebic("stack down")
-!Up::Komorebic("stack up")
-
-!Right::Komorebic("stack right")
-!;::Komorebic("unstack")
-![::Komorebic("cycle-stack previous")
-!]::Komorebic("cycle-stack next")
-
-; Resize
-!=::Komorebic("resize-axis horizontal increase")
-!-::Komorebic("resize-axis horizontal decrease")
-!+=::Komorebic("resize-axis vertical increase")
-!+_::Komorebic("resize-axis vertical decrease")
+#Left::Komorebic("stack left")
+#Down::Komorebic("stack down")
+#Up::Komorebic("stack up")
+#Right::Komorebic("stack right")
+#;::Komorebic("unstack")
+#+Tab::Komorebic("cycle-stack previous")
+#Tab::Komorebic("cycle-stack next")
 
 ; Manipulate windows
 #Space::Komorebic("toggle-float")
 #f::Komorebic("toggle-monocle")
-
-; Window manager options
-!+r::Komorebic("retile")
 
 ; Workspaces
 #1::Komorebic("focus-workspace 0")
