@@ -1,5 +1,6 @@
 ; ===== Execute applications ===== ;
 #Enter::Run "powershell.exe"
+#i::Run "start msedge"
 
 ; ===== Komorebi commands ===== ;
 Komorebic(cmd) {
