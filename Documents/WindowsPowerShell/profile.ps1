@@ -124,3 +124,6 @@ Set-PSReadlineOption -Color @{
     "Type" = [ConsoleColor]::Cyan
     "Comment" = [ConsoleColor]::DarkCyan
 }
+
+# Always spawn in home directory
+cd ~
