@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[include]
+	path = ~/.config/git/config-personal
+
+[includeIf "gitdir:~/Documents/projects"]
+	path = ~/.config/git/config-work
+
+[credential "helperselector"]
+	selected = manager
