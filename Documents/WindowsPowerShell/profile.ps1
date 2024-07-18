@@ -103,7 +103,7 @@ function Write-BranchName () {
 
 function prompt {
     Write-BranchName
-    $path = "$($executionContext.SessionState.Path.CurrentLocation) "
+    $path = "$(Split-Path -leaf -path (Get-Location)) "
     Write-Host $path -NoNewline -ForegroundColor "blue"
     $userPrompt = "$('>') "
     return $userPrompt
