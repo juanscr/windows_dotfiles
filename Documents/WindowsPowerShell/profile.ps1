@@ -110,7 +110,7 @@ function prompt {
 }
 
 # Configuration home for komorebi
-$Env:KOMOREBI_CONFIG_HOME = 'C:\Users\juancard\.config\komorebi'
+$Env:KOMOREBI_CONFIG_HOME = "$Env:USERPROFILE\.config\komorebi"
 
 # ===== Color Scheme Configuration (ColorTool + Dracula) ===== #
 # Dracula readline configuration. Requires version 2.0, if you have 1.2 convert to `Set-PSReadlineOption -TokenType`
