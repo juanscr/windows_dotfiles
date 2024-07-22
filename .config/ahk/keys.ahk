@@ -3,10 +3,12 @@
 #i::Run "msedge.exe"
 
 ; ===== Komorebi commands ===== ;
+UserHome := EnvGet("USERPROFILE")
+EnvSet "KOMOREBI_CONFIG_HOME", UserHome "\.config\komorebi"
 Komorebic(cmd) {
     RunWait(format("komorebic.exe {}", cmd), , "Hide")
 }
-Komorebic("start")
+Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
 
 ; Scratchpad
 #^s::Komorebic("minimize")
