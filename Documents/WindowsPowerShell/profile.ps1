@@ -56,7 +56,7 @@ Set-Alias -name gc -Value GitCheckout -Force -Option AllScope
 Function GitCommitAll {GitCommand commit -a}
 Set-Alias -name gca -Value GitCommitAll
 
-Function GitClone {GitCommand clone @args}
+Function GitClone {git clone @args}
 Set-Alias -name gcl -Value GitClone
 
 Function GitCommitMessage {GitCommand commit -m @args}
