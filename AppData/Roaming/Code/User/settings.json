@@ -1,0 +1,54 @@
+{
+  "workbench.colorTheme": "Dracula Theme",
+
+  // Font Configuration
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.codeLensFontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.inlayHints.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+
+  // Format on save
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Python
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  // 88 Column ruler
+  "editor.rulers": [88],
+  "vim.textwidth": 88,
+
+  // Vim
+  "vim.useSystemClipboard": true,
+
+  // Trailing white space extension
+  "trailing-spaces.trimOnSave": true,
+
+  // Prettier
+  "prettier.trailingComma": "all"
+}
