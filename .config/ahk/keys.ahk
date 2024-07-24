@@ -16,6 +16,9 @@ Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
 ; Quit window
 #q::Komorebic("close")
 
+; Retile (Komorebi gets stuck in weird places sometimes)
+#r::Komorebic("retile")
+
 ; Focus windows
 #h::Komorebic("focus left")
 #j::Komorebic("focus down")
