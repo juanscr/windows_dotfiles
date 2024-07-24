@@ -50,5 +50,8 @@
   "trailing-spaces.trimOnSave": true,
 
   // Prettier
-  "prettier.trailingComma": "all"
+  "prettier.trailingComma": "all",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
