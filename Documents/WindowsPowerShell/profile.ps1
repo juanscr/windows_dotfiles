@@ -71,6 +71,9 @@ Set-Alias -name gdt -Value GitDiffTool
 Function GitPush {GitCommand push @args}
 Set-Alias -name gp -Value GitPush -Force -Option AllScope
 
+Function GitPull {GitCommand pull @args}
+Set-Alias -name gpl -Value GitPush -Force -Option AllScope
+
 Function GitRemove {GitCommand rm @args}
 Set-Alias -name gr -Value GitRemove
 
