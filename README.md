@@ -93,7 +93,10 @@ tab, make sure to change the "Configure for:" option to "Windows 10" as such:
 
 After that, setup a new trigger, select "At log on" as the trigger and change to
 only run when "Specific user:" is yours (it should be automatically set if you are
-logged in as your user). Then, set the action and as the script set the path to the
+logged in as your user). I also activate a delay on the trigger as for some weird
+reason without it AHK would fail to start.
+
+Then, set the action and as the script set the path to the
 `autohotkey` executable and, as an argument, the path to the autohotkey configuration
 you want. You should have something similar as:
 
