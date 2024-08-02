@@ -28,6 +28,7 @@ And there you go. Happy tinkering!
 - [Programs I install](#programs)
 - [My PowerToys config](#power-toys)
 - [AutoHotkey at LogOn](#ahk-setup)
+- [WinUtil for the win](#winutil)
 
 <a name="programs"></a>
 ## Programs
@@ -74,3 +75,32 @@ Lastly, go to the conditions tab and remove the checkmark so it runs the task
 everytime, even if the computer is not connect to AC as such:
 
 ![conditions-error](./Pictures/assets/conditions.png)
+
+<a name="winutil"></a>
+## WinUtil Tweaks
+[WinUtil](https://christitustech.github.io/winutil/) is a set of windows utilities and
+set of scripts for customizing the Windows experience for a more minimal and faster
+experience. I have found this pretty useful as it automates a lot of valuable tasks and
+debloating easily my Windows installation.
+
+The following tweaks I apply are:
+
+- Disable ConsumerFeatures
+- Disable Telemetry
+- Disable GameDVR
+- Disable hibernation
+- Disable homegroup
+- Disable wifi sense
+- Change Windows Terminal default: PowerShell 5 -> PowerShell 7
+- Disable Powershell 7 Telemetry
+- Set services to manual
+
+I also turn off the following features:
+
+- Bing Search in Start Menu
+- Snap Window
+- Snap Assist Flyout
+- Snap Assist Suggestion
+
+I also suggest running once in a while the "Run Disk Cleanup" for cleaning up
+storage space.
