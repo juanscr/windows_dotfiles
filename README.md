@@ -59,6 +59,26 @@ winget install --id Microsoft.Powershell --source winget
 
 <a name="power-toys"></a>
 ## My Power Toys Configuration
+Microsoft PowerToys is a set of utilities for power users to tune and
+streamline their Windows experience for greater productivity. This is great as it
+allows for adding features and customizing a lot of the default experience for Windows.
+
+I use the following modules from power toys:
+
+- Awake: Keep your PC awake
+- Color picker: utility for seeing RGB of current color on screen. Mapped to
+Win+Shift+C.
+- PowerToys Run: A quick application launcher like dmenu.
+- Environment Variables: Quick way to manage environment variables in system.
+- Keyboard Manager: utility for remapping keys. I remapped Escape and Caps-lock using
+this.
+
+### PowerToys Run
+For running the PowerToys Run utility, I map it to my common keybind in my other window
+managers `Win+d` to launch it. Additionally, I disable all plugins except for two:
+
+- Program: Search for programs to launch.
+- Windows settings: Search for settings to modify.
 
 <a name="ahk-setup"></a>
 ## Setting up AHK at LogIn
