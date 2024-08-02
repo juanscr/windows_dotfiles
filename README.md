@@ -49,6 +49,14 @@ Additionally, through the windows store I install:
 - [Power Toys](https://github.com/microsoft/PowerToys): Windows system
 utilities for power users.
 
+Also, using `winget` I install [powershell](https://github.com/PowerShell/PowerShell)
+for replacing Windows Powerhsell as it is a much faster and improved alternative
+from the default shell as such:
+
+```powershell
+winget install --id Microsoft.Powershell --source winget
+```
+
 <a name="power-toys"></a>
 ## My Power Toys Configuration
 
