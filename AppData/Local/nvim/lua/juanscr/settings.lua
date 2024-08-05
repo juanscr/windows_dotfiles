@@ -1,5 +1,4 @@
 vim.g.nofsync = true
-vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
