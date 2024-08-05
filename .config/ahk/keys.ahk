@@ -1,6 +1,7 @@
 ; ===== Execute applications ===== ;
 #Enter::Run "pwsh.exe"
 #i::Run "msedge.exe"
+#s::Run "Spotify.exe"
 
 ; ===== Komorebi commands ===== ;
 UserHome := EnvGet("USERPROFILE")
@@ -10,14 +11,14 @@ Komorebic(cmd) {
 }
 Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
 
-; Scratchpad
-#^s::Komorebic("minimize")
-
 ; Quit window
 #q::Komorebic("close")
 
 ; Retile (Komorebi gets stuck in weird places sometimes)
 #r::Komorebic("retile")
+
+; Reload configuration
+#+r::Komorebic("reload-configuration")
 
 ; Focus windows
 #h::Komorebic("focus left")
@@ -63,3 +64,11 @@ Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
 #+6::Komorebic("move-to-workspace 5")
 #+7::Komorebic("move-to-workspace 6")
 #+8::Komorebic("move-to-workspace 7")
+
+; Focus monitor
+#w::Komorebic("focus-monitor 0")
+#e::Komorebic("focus-monitor 1")
+
+; Move between monitor
+#+w::Komorebic("move-to-monitor 0")
+#+e::Komorebic("move-to-monitor 1")
