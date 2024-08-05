@@ -67,18 +67,16 @@
   "display_index_preferences": {
      "0": "LEN63A9-4&35e2833d&0&UID8261"
   },
-  "manage_rules": [
-    {
-      "id": "TeamsWebView",
-      "kind": "Class",
-      "matching_strategy": "Legacy"
-    }
-  ],
   "float_rules": [
     {
       "id": "PowerToys.PowerLauncher.exe",
       "kind": "Exe",
       "matching_strategy": "Equals"
+    },
+    {
+      "id": "TeamsWebView",
+      "kind": "Class",
+      "matching_strategy": "Legacy"
     }
   ]
 }
