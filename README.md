@@ -43,6 +43,9 @@ be installed `zig` and `node` for treesitter support.
 - `komorebi`: Tilling window management for windows.
 - `autohotkey`: Automate scripts and bind to keybinds.
 - `unzip`: Unzip utility.
+- `fd`: Fuzzy finder.
+- `ripgrep`: Recursively search in directories.
+- `grep`: Print lines matching a pattern.
 
 Additionally, through the windows store I install:
 
