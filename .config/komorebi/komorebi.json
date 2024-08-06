@@ -72,11 +72,6 @@
       "id": "PowerToys.PowerLauncher.exe",
       "kind": "Exe",
       "matching_strategy": "Equals"
-    },
-    {
-      "id": "TeamsWebView",
-      "kind": "Class",
-      "matching_strategy": "Legacy"
     }
   ]
 }
