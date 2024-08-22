@@ -1,0 +1,43 @@
+" ===== General settings ===== "
+set nu
+set relativenumber
+
+" Search options
+set nohlsearch
+set incsearch
+
+" Remove all trailing white spaces on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" ===== Keybinds ===== "
+let mapleader = "\<Space>"
+
+" Move files in visual mode
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap P :m '<-2<CR>gv=gv
+
+" Copy and paste settings
+nnoremap <leader>cp "+p
+vnoremap <leader>cp "+p
+nnoremap <leader>cP "+P
+nnoremap <leader>cy "+y
+vnoremap <leader>cy "+y
+nnoremap <leader>cY "+Y
+
+" Specific IDE settings
+if has('ide')
+  " Telescope like behavior
+  map <leader>ff <Action>(GotoFile)
+
+  " LSP-like settings
+  map <leader>lcn <Action>(RenameElement)
+  map <leader>len <Action>(GotoPreviousError)
+  map <leader>len <Action>(GotoNextError)
+  map <leader>ldo <Action>(GotoDeclaration)
+  map <leader>lro <Action>(FindUsages)
+
+  " Window-like vim movement
+  map <leader>wc <Action>(CloseActiveTab)
+  map <leader>wn <Action>(NextTab)
+  map <leader>wp <Action>(PreviousTab)
+endif
