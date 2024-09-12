@@ -49,7 +49,7 @@ Function GitAdd {GitCommand add @args}
 Set-Alias -name ga -Value GitAdd
 
 Function GitBranch {GitCommand branch @args}
-Set-Alias -name gb -Value GitAdd
+Set-Alias -name gb -Value GitBranch
 
 Function GitCheckout {GitCommand checkout @args}
 Set-Alias -name gc -Value GitCheckout -Force -Option AllScope
