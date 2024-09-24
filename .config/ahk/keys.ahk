@@ -72,3 +72,7 @@ Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
 ; Move between monitor
 #+w::Komorebic("move-to-monitor 0")
 #+e::Komorebic("move-to-monitor 1")
+
+; Turn off komorebic or turn on
+#>^k::Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
+#+>^k::Komorebic("stop")
