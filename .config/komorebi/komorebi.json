@@ -64,9 +64,13 @@
       ]
     }
   ],
-  "display_index_preferences": {
-    "0": "LEN63A9-4&35e2833d&0&UID41031",
-    "1": "LEN4147-4&35e2833d&0&UID8388688"
+  "monitor_index_preferences": {
+    "0": {
+      "left": 0,
+      "top": 0,
+      "right": 3840,
+      "bottom": 2160
+    }
   },
   "float_rules": [
     {
