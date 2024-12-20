@@ -88,6 +88,10 @@ Set-Alias -name gs -Value GitStatus
 Function Neovim {nvim @args}
 Set-Alias -name n -Value Neovim
 
+# VS Code
+Function VSCode {code @args}
+Set-Alias -name c -Value VSCode
+
 # ===== Prompt ===== #
 function Write-BranchName () {
 }
