@@ -6,10 +6,10 @@
   "default_workspace_padding": 10,
   "default_container_padding": 10,
 
-  "transparency": false,
+  "transparency": true,
   "transparency_alpha": 225,
 
-  "border": true,
+  "border": false,
   "border_width": 8,
   "border_offset": -1,
   "border_colours": {
