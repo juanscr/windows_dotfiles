@@ -29,6 +29,7 @@ And there you go. Happy tinkering!
 - [My PowerToys config](#power-toys)
 - [AutoHotkey at LogOn](#ahk-setup)
 - [WinUtil for the win](#winutil)
+- [Setting up Komorebi](#komorebi)
 
 <a name="programs"></a>
 ## Programs
@@ -138,3 +139,16 @@ I also turn off the following features:
 
 I also suggest running once in a while the "Run Disk Cleanup" for cleaning up
 storage space.
+
+<a name="komorebi"></a>
+## Setting up Komorebi
+While most of my configuration auto-setups the Komorebi stuff, there are two things I
+do manually which I have found to make a more stable experience for using komorebi as a
+window tilling manager.
+
+- I setup manually the `KOMOREBI_CONFIG_HOME` environment variable through Power
+Toys. This I have found is the more reliable way to set the environment variable.
+- Instead of launching komorebi manually or through the AHK script, I manually run the
+`komorebic enable-autostart` command in order to autolaunching the program.
+
+After doing both of the previous things, all other thins pretty much work flawlessly.
