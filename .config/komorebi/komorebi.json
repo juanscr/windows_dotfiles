@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.28/schema.json",
-  "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.yaml",
+  "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.json",
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
   "default_workspace_padding": 10,
@@ -69,25 +69,13 @@
       ]
     }
   ],
-  "monitor_index_preferences": {
-    "0": {
-      "left": 0,
-      "top": 0,
-      "right": 3840,
-      "bottom": 2160
-    },
-    "1": {
-      "left": -3840,
-      "top": 0,
-      "right": 3840,
-      "bottom": 2400
-    }
-  },
   "display_index_preferences": {
     "0": "GSM5B72-4&35e2833d&0&UID4145",
-    "1": "LEN4147-4&35e2833d&0&UID8388688"
+    "1": "LEN63A9-4&35e2833d&0&UID8261",
+    "2": "LEN4147-4&35e2833d&0&UID8388688"
   },
-  "float_rules": [
+
+  "ignore_rules": [
     {
       "id": "PowerToys.PowerLauncher.exe",
       "kind": "Exe",
