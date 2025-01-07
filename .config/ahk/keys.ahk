@@ -4,12 +4,9 @@
 #s::Run "Spotify.exe"
 
 ; ===== Komorebi commands ===== ;
-UserHome := EnvGet("USERPROFILE")
-EnvSet "KOMOREBI_CONFIG_HOME", UserHome "\.config\komorebi"
 Komorebic(cmd) {
     RunWait(format("komorebic.exe {}", cmd), , "Hide")
 }
-Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
 
 ; Quit window
 #q::Komorebic("close")
@@ -74,5 +71,5 @@ Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
 #+e::Komorebic("move-to-monitor 1")
 
 ; Turn off komorebic or turn on
-#>^k::Komorebic("start -c $Env:USERPROFILE\.config\komorebi\komorebi.json")
+#>^k::Komorebic("start")
 #+>^k::Komorebic("stop")
