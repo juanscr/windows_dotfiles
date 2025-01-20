@@ -4,7 +4,7 @@ general:
   config_reload_commands: []
 
   # Whether to automatically focus windows underneath the cursor.
-  focus_follows_cursor: false
+  focus_follows_cursor: true
 
   # Whether to switch back and forth between the previously focused
   # workspace when focusing the current workspace.
@@ -243,6 +243,11 @@ window_rules:
     match:
       - window_process: { equals: "WindowsTerminal" }
 
+  # Move to workspace 3
+  - commands: ["move --workspace 3"]
+    match:
+      - window_process: { equals: "WINWORD" }
+
   # Move to workspace 4
   - commands: ["move --workspace 4"]
     match:
@@ -252,6 +257,11 @@ window_rules:
   - commands: ["move --workspace 5"]
     match:
       - window_process: { equals: "ms-teams" }
+
+  # Move to workspace 8
+  - commands: ["move --workspace 8"]
+    match:
+      - window_process: { equals: "Spotify" }
 
   # Floating rules
   - commands: ["toggle-floating --centered"]
