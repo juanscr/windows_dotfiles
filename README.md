@@ -151,7 +151,8 @@ environment for it. Although it is a good project, it has two things I don't lik
 
 Although I am not against charging for using a tool such as `komorebi`, I find the
 pricing not worth it as you would have to pay monthly. As such, I decided to go with
-`glazewm` instead.
+`glazewm` instead. In this repository you'll find both configurations for `komorebi`
+and `glazewm`, so anyone can see how I configured both tools.
 
 `glazewm` is a tilling window manager based on i3. Although I loved the preset
 workspace layouts `komorebi` had, glaze wins massively in performance. Additionally,
