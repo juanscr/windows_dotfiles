@@ -236,17 +236,22 @@ window_rules:
   # Move to workspace 1
   - commands: ["move --workspace 1"]
     match:
-      - window_process: { regex: "msedge" }
+      - window_process: { equals: "msedge" }
 
   # Move to workspace 2
   - commands: ["move --workspace 2"]
     match:
-      - window_process: { regex: "WindowsTerminal" }
+      - window_process: { equals: "WindowsTerminal" }
+
+  # Move to workspace 4
+  - commands: ["move --workspace 4"]
+    match:
+      - window_process: { equals: "Code" }
 
   # Move to workspace 5
   - commands: ["move --workspace 5"]
     match:
-      - window_process: { regex: "ms-teams" }
+      - window_process: { equals: "ms-teams" }
 
   # Floating rules
   - commands: ["toggle-floating --centered"]
