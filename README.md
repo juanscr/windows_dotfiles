@@ -29,7 +29,8 @@ And there you go. Happy tinkering!
 - [My PowerToys config](#power-toys)
 - [AutoHotkey at LogOn](#ahk-setup)
 - [WinUtil for the win](#winutil)
-- [Setting up Komorebi](#komorebi)
+- [Tiling in Windows](#tiling)
+- [GlazeWM FTW!](#glazewm)
 
 <a name="programs"></a>
 ## Programs
@@ -41,7 +42,7 @@ be installed `zig` and `node` for treesitter support.
 - `git`: Version control.
 - `sudo`: Sudo for windows.
 - `eza`: Ls but in Rust.
-- `komorebi`: Tilling window management for windows.
+- `glazewm`: Tilling window management for windows.
 - `autohotkey`: Automate scripts and bind to keybinds.
 - `unzip`: Unzip utility.
 - `fd`: Fuzzy finder.
@@ -140,15 +141,26 @@ I also turn off the following features:
 I also suggest running once in a while the "Run Disk Cleanup" for cleaning up
 storage space.
 
-<a name="komorebi"></a>
-## Setting up Komorebi
-While most of my configuration auto-setups the Komorebi stuff, there are two things I
-do manually which I have found to make a more stable experience for using komorebi as a
-window tilling manager.
+<a name="tiling"></a>
+## Tiling in Windows
+I initially tested `komorebi` for personal purposes and try to create a production
+environment for it. Although it is a good project, it has two things I don't like:
 
-- I setup manually the `KOMOREBI_CONFIG_HOME` environment variable through Power
-Toys. This I have found is the more reliable way to set the environment variable.
-- Instead of launching komorebi manually or through the AHK script, I manually run the
-`komorebic enable-autostart` command in order to autolaunching the program.
+- It is slow, at least compared with `glazewm`.
+- For usage at work, one needs to buy an individual commercial license.
 
-After doing both of the previous things, all other thins pretty much work flawlessly.
+Although I am not against charging for using a tool such as `komorebi`, I find the
+pricing not worth it as you would have to pay monthly. As such, I decided to go with
+`glazewm` instead.
+
+`glazewm` is a tilling window manager based on i3. Although I loved the preset
+workspace layouts `komorebi` had, glaze wins massively in performance. Additionally,
+`glazewm` is FOSS which allows all types of use in all scenarios, which I deeply
+support.
+
+<a name="glazewm"></a>
+## GlazeWM FTW!
+For setting `glazewm`, first through Power Toys create the environment variable
+`GLAZEWM_CONFIG_PATH` to `C:\Users\youruserhere\.config\glazewm\config,yaml` so it can
+properly load the configuration I created. After that, everything will work with my
+configuration which you can modify at your will.
