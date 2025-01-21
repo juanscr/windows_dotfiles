@@ -10,6 +10,15 @@ general:
   # workspace when focusing the current workspace.
   toggle_workspace_on_refocus: false
 
+  # How windows should be hidden when switching workspaces.
+  # - 'cloak': Recommended. Hides windows with no animation.
+  # - 'hide': Legacy method (v3.5 and earlier) that has a brief animation,
+  # but has stability issues with some apps.
+  hide_method: 'cloak'
+
+  # Show apps in taskbar
+  show_all_in_taskbar: true
+
   cursor_jump:
     # Whether to automatically move the cursor on the specified trigger.
     enabled: true
