@@ -51,6 +51,14 @@ Set-Alias -name ga -Value GitAdd
 Function GitBranch {GitCommand branch @args}
 Set-Alias -name gb -Value GitBranch
 
+Function GitBranchCheckout {
+    param (
+        $BranchName
+    )
+    GitCommand branch $BranchName && GitCommand checkout $BranchName
+}
+Set-Alias -name gbc -Value GitBranchCheckout
+
 Function GitCheckout {GitCommand checkout @args}
 Set-Alias -name gc -Value GitCheckout -Force -Option AllScope
 
