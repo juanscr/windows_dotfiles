@@ -25,7 +25,6 @@ Set-PSReadLineKeyHandler -Key Ctrl+Spacebar -Function AcceptSuggestion
 Set-PSReadLineOption -BellStyle Visual
 
 # ===== Aliases ===== #
-#
 # Ls with icons
 Function ListFiles {eza --icons --ignore-glob="__pycache__" --group-directories-first @args}
 New-Alias -name ls -Value ListFiles -Force -Option AllScope
@@ -101,9 +100,6 @@ Function VSCode {code @args}
 Set-Alias -name c -Value VSCode
 
 # ===== Prompt ===== #
-function Write-BranchName () {
-}
-
 function prompt {
     $path = "$(Split-Path -leaf -path (Get-Location)) "
     Write-Host $path -NoNewline -ForegroundColor "blue"
@@ -136,5 +132,12 @@ Set-PSReadlineOption -Color @{
     "Comment" = [ConsoleColor]::DarkCyan
 }
 
+# Import things from other directory
+$otherProfilePath = $PSScriptRoot + ".\Other_profile.ps1"
+if (Test-Path $otherProfilePath) {
+    & $otherProfilePath
+}
+
 # Always spawn in home directory
 cd ~
+
