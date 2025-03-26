@@ -290,6 +290,9 @@ window_rules:
       # Ignore task manager
       - window_process: { equals: "Taskmgr" }
 
+      # Ignore task manager
+      - window_process: { equals: "ScreenToGif" }
+
       # Ignore rules for various 3rd-party apps.
       - window_process: { equals: 'PowerToys' }
         window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
