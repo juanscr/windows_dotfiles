@@ -267,6 +267,11 @@ window_rules:
     match:
       - window_process: { equals: "ms-teams" }
 
+  # Move to workspace 6
+  - commands: ["move --workspace 6"]
+    match:
+      - window_process: { equals: "Windows365" }
+
   # Move to workspace 8
   - commands: ["move --workspace 8"]
     match:
@@ -276,6 +281,8 @@ window_rules:
   - commands: ["toggle-floating --centered"]
     match:
       - window_title: { regex: "Window Spy (.*)" }
+
+      - window_title: { regex: "Bitwarden" }
 
 
   - commands: ['ignore']
