@@ -7,3 +7,5 @@
 
 [credential "helperselector"]
 	selected = manager
+[http]
+	postBuffer = 524288000
