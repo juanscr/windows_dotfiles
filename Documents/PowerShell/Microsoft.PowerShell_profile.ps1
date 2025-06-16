@@ -50,14 +50,6 @@ Set-Alias -name ga -Value GitAdd
 Function GitBranch {GitCommand branch @args}
 Set-Alias -name gb -Value GitBranch
 
-Function GitBranchCheckout {
-    param (
-        $BranchName
-    )
-    GitCommand branch $BranchName && GitCommand checkout $BranchName
-}
-Set-Alias -name gbc -Value GitBranchCheckout
-
 Function GitCheckout {GitCommand checkout @args}
 Set-Alias -name gc -Value GitCheckout -Force -Option AllScope
 
@@ -141,3 +133,13 @@ if (Test-Path $otherProfilePath) {
 # Always spawn in home directory
 cd ~
 
+
+# Import the Chocolatey Profile that contains the necessary code to enable
+# tab-completions to function for `choco`.
+# Be aware that if you are missing these lines from your profile, tab completion
+# for `choco` will not function.
+# See https://ch0.co/tab-completion for details.
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
