@@ -133,6 +133,9 @@ workspaces:
   - name: '8'
     bind_to_monitor: 0
 
+  - name: '9'
+    bind_to_monitor: 2
+
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: 'resize'
@@ -215,6 +218,8 @@ keybindings:
     bindings: ["lwin+7"]
   - commands: ["focus --workspace 8"]
     bindings: ["lwin+8"]
+  - commands: ["focus --workspace 9"]
+    bindings: ["lwin+9"]
 
   # Move windows across workspaces
   - commands: ["move --workspace 1"]
@@ -233,6 +238,8 @@ keybindings:
     bindings: ["lwin+shift+7"]
   - commands: ["move --workspace 8"]
     bindings: ["lwin+shift+8"]
+  - commands: ["move --workspace 9"]
+    bindings: ["lwin+shift+9"]
 
   # Move workspaces between monitors
   - commands: ["move-workspace --direction left"]
