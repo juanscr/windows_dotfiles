@@ -57,5 +57,6 @@
 
   // Never run jest tests without any trigger
   "jest.runMode": "on-demand",
-  "github.codespaces.usePortForwardingServiceForHTTPS": false
+  "github.codespaces.usePortForwardingServiceForHTTPS": false,
+  "github.copilot.nextEditSuggestions.enabled": true
 }
