@@ -130,9 +130,6 @@ if (Test-Path $otherProfilePath) {
     & $otherProfilePath
 }
 
-# Always spawn in home directory
-cd ~
-
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
