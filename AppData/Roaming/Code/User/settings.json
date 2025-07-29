@@ -41,10 +41,6 @@
 
   // 88 Column ruler
   "editor.rulers": [88],
-  "vim.textwidth": 88,
-
-  // Vim
-  "vim.useSystemClipboard": true,
 
   // Trailing white space extension
   "trailing-spaces.trimOnSave": true,
@@ -58,5 +54,11 @@
   // Never run jest tests without any trigger
   "jest.runMode": "on-demand",
   "github.codespaces.usePortForwardingServiceForHTTPS": false,
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+
+  // Neovim afinity
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
 }

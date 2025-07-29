@@ -13,8 +13,12 @@ vim.keymap.set("n", "<leader>cy", "\"+y")
 vim.keymap.set("v", "<leader>cy", "\"+y")
 vim.keymap.set("n", "<leader>cY", "\"+Y")
 
--- Move between windows
-vim.keymap.set("n", "<leader>w", "<C-w>")
+if not vim.g.vscode then
+    -- Move between windows
+    vim.keymap.set("n", "<leader>w", "<C-w>")
 
--- Explore directories
-vim.keymap.set("n", "<leader>fe", ":Explore<CR>")
+    -- Explore directories
+    vim.keymap.set("n", "<leader>fe", ":Explore<CR>")
+else
+end
+
