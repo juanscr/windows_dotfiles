@@ -314,3 +314,7 @@ window_rules:
         window_title: { regex: '.*? - Peek' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
+
+      # Ignore ghost glazewm window occassionally
+      - window_title: { equals: 'C:\\Users\\juancard\\scoop\\apps\\glazewm\\current\\cli\\glazewm.exe' }
+
