@@ -316,5 +316,5 @@ window_rules:
         window_class: { regex: 'HwndWrapper' }
 
       # Ignore ghost glazewm window occassionally
-      - window_title: { equals: 'C:\\Users\\juancard\\scoop\\apps\\glazewm\\current\\cli\\glazewm.exe' }
+      - window_title: { regex: '.*glazewm.exe' }
 
