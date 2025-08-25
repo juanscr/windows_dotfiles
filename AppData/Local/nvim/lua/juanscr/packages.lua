@@ -21,7 +21,8 @@ require("lazy").setup({
     -- Solarized theme
     {
         'shaunsingh/solarized.nvim',
-        cond = not vim.g.vscode
+        cond = not vim.g.vscode,
+        lazy = true
     },
 
     -- Treesitter
@@ -68,10 +69,6 @@ require("lazy").setup({
         cond = not vim.g.vscode
     },
     {
-        'L3MON4D3/LuaSnip',
-        cond = not vim.g.vscode
-    },
-    {
         'williamboman/mason.nvim',
         cond = not vim.g.vscode
     },
@@ -97,6 +94,7 @@ require("lazy").setup({
     -- Magit alike
     {
         "NeogitOrg/neogit",
+        lazy = true,
         cond = not vim.g.vscode,
         dependencies = {
             "nvim-lua/plenary.nvim",         -- required
@@ -115,6 +113,7 @@ require("lazy").setup({
     -- Format files with specific tools
     {
         'stevearc/conform.nvim',
+        lazy = true,
         cond = not vim.g.vscode,
         opts = {},
     }
