@@ -14,3 +14,12 @@ RegWrite 0, "REG_DWORD", "HKLM\Software\Policies\Microsoft\Dsh", "AllowNewsAndIn
   DllCall("LockWorkStation")
   Reload
 }
+
+OnExit ExitFunc
+
+ExitFunc(ExitReason, ExitCode) {
+  ; Revert all writes to the registry
+  RegWrite 0, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System", "DisableLockWorkstation"
+  RegWrite 0, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer", "NoWinKeys"
+
+}
