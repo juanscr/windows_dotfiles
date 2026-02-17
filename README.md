@@ -34,33 +34,28 @@ And there you go. Happy tinkering!
 
 <a name="programs"></a>
 ## Programs
-First, as a package manager I use [scoop](https://github.com/ScoopInstaller/Scoop).
-After installing `scoop` I install the following programs through it:
+First, as a package manager I use the default
+[winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/),
+which is the default package manager for Windows. Although a bit cumbersome to
+use, it is the more reliable compared with `chocolatey` and `scoop`. The
+packages I install are:
 
 - `neovim`: Text command line editor. For my installation to work, it must also
-be installed `zig` and `node` for treesitter support.
-- `git`: Version control.
-- `sudo`: Sudo for windows.
-- `eza`: Ls but in Rust.
-- `glazewm`: Tilling window management for windows.
-- `autohotkey`: Automate scripts and bind to keybinds.
-- `unzip`: Unzip utility.
-- `fd`: Fuzzy finder.
-- `ripgrep`: Recursively search in directories.
-- `grep`: Print lines matching a pattern.
+be installed `zig` and `node` for treesitter support. `winget install --id=Neovim.Neovim -e`
+- `git`: Version control. `winget install --id=Git.Git -e`
+- `eza`: Ls but in Rust. `winget install --id=eza-community.eza -e`
+- `glazewm`: Tilling window management for windows. `winget install --id=glzr-io.glazewm -e`
+- `autohotkey`: Automate scripts and bind to keybinds. `winget install --id=AutoHotkey.AutoHotkey -e`
+- `grep`: Print lines matching a pattern. `winget install --id=Neovim.Neovim -e`
+- `Powershell`: to replace Windows Powerhsell as it is a much faster and
+improved alternative from the default shell. `winget install --id Microsoft.Powershell --source winget`.
 
-Additionally, through the windows store I install:
+For searching packages for `winget` I recommend searching the package through
+[ragerworks](https://winget.ragerworks.com). Additionally, through the windows
+store I install:
 
 - [Power Toys](https://github.com/microsoft/PowerToys): Windows system
 utilities for power users.
-
-Also, using `winget` I install [powershell](https://github.com/PowerShell/PowerShell)
-for replacing Windows Powerhsell as it is a much faster and improved alternative
-from the default shell as such:
-
-```powershell
-winget install --id Microsoft.Powershell --source winget
-```
 
 <a name="power-toys"></a>
 ## My Power Toys Configuration
