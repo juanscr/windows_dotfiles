@@ -134,6 +134,9 @@ workspaces:
     bind_to_monitor: 0
 
   - name: '9'
+    bind_to_monitor: 0
+
+  - name: '0'
     bind_to_monitor: 2
 
 binding_modes:
@@ -253,11 +256,6 @@ window_rules:
   - commands: ["move --workspace 1"]
     match:
       - window_process: { equals: "msedge" }
-
-  # Move to workspace 2
-  - commands: ["move --workspace 2"]
-    match:
-      - window_process: { equals: "WindowsTerminal" }
 
   # Move to workspace 3
   - commands: ["move --workspace 3"]
