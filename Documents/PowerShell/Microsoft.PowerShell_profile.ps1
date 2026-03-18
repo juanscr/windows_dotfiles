@@ -130,6 +130,11 @@ if (Test-Path $otherProfilePath) {
     & $otherProfilePath
 }
 
+# Refresh path after winget installs
+function Refresh-Path {
+  $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" +
+              [System.Environment]::GetEnvironmentVariable("Path","User")
+}
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
