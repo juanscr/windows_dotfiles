@@ -158,6 +158,26 @@ For more information about configuration options, please visit the Wiki https://
 .sep-tray .label {
     color: var(--text1);
 }
+/* Minimal bar separators */
+.sep-minimal-cpu,
+.sep-minimal-mem,
+.sep-minimal-clock {
+    padding: 0 5px;
+}
+.sep-minimal-cpu .label,
+.sep-minimal-mem .label,
+.sep-minimal-clock .label {
+    font-size: 13px;
+}
+.sep-minimal-cpu .label {
+    color: var(--red);
+}
+.sep-minimal-mem .label {
+    color: var(--blue);
+}
+.sep-minimal-clock .label {
+    color: var(--text1);
+}
 /* Active window widget - compact */
 .active-window-widget {
     padding: 0 5px;

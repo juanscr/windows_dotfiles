@@ -8,5 +8,8 @@
 ; Do not launch menu with lwin key
 ~LWin::vkE8
 
-; Turn on glazewm
-#>^g::Run "glazewm.exe start"
+; Turn on glazewm + yasb
+#>^g::{
+  Run "glazewm.exe start"
+  Run 'pwsh.exe -WindowStyle Hidden -File "' A_UserProfile '\.config\yasb\launch-yasb.ps1"'
+}
