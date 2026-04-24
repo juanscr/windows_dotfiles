@@ -41,12 +41,18 @@ bars:
       - "glazewm_workspaces"
       right:
       - "media"
+      - "sep1"
       - "microphone"
       - "volume"
+      - "sep2"
       - "active_window"
+      - "sep3"
       - "update_check"
+      - "sep4"
       - "systeminfo-grouper"
+      - "sep5"
       - "clock"
+      - "sep6"
       - "home"
       - "systray"
 
@@ -89,25 +95,14 @@ widgets:
   media:
     type: "yasb.media.MediaWidget"
     options:
-      label: "{title}"
+      label: "{artist}{s}{title}"
       label_alt: "{artist} - {title}"
       max_field_size:
         label: 16
         label_alt: 24
-      show_thumbnail: true
-      controls_only: false
-      controls_left: true
+      show_thumbnail: false
       controls_hide: true
       hide_empty: true
-      thumbnail_alpha: 100
-      thumbnail_padding: 16
-      thumbnail_corner_radius: 0
-      thumbnail_edge_fade: true
-      icons:
-        prev_track: "\udb81\udcae"
-        next_track: "\udb81\udcad"
-        play: "\udb81\udc0a"
-        pause: "\udb80\udfe4"
       media_menu:
         blur: false
         round_corners: false
@@ -316,3 +311,63 @@ widgets:
         direction: "down"
         offset_top: 6
         offset_left: 0
+
+  sep1:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "|"
+      class_name: "sep-audio"
+      exec_options:
+        run_cmd: null
+        run_interval: 0
+        return_format: "string"
+
+  sep2:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "|"
+      class_name: "sep-window"
+      exec_options:
+        run_cmd: null
+        run_interval: 0
+        return_format: "string"
+
+  sep3:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "|"
+      class_name: "sep-updates"
+      exec_options:
+        run_cmd: null
+        run_interval: 0
+        return_format: "string"
+
+  sep4:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "|"
+      class_name: "sep-hardware"
+      exec_options:
+        run_cmd: null
+        run_interval: 0
+        return_format: "string"
+
+  sep5:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "|"
+      class_name: "sep-clock"
+      exec_options:
+        run_cmd: null
+        run_interval: 0
+        return_format: "string"
+
+  sep6:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "|"
+      class_name: "sep-tray"
+      exec_options:
+        run_cmd: null
+        run_interval: 0
+        return_format: "string"

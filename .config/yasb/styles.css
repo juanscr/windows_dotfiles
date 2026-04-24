@@ -1,30 +1,33 @@
-/* 
-This is default and very simple styles file for Yasb. 
+/*
+This is default and very simple styles file for Yasb.
 For more information about configuration options, please visit the Wiki https://github.com/amnweb/yasb/wiki
 */
+/* Dracula theme colors */
 :root {
-    --mauve: #cba6f7;
-    --red: #f38ba8;
-    --yellow: #ffd16d;
-    --blue: #448fff;
-    --lavender: #b4befe;
-    --text1: #d4d9eb;
-    --text2: #8f929e;
-    --text3: #9399b2;
-    --text4: #7f849c;
-    --bg-color1: #191919;
-    --bg-color2: #333333;
+    --mauve: #FF79C6;
+    --red: #FF5555;
+    --yellow: #F1FA8C;
+    --blue: #BD93D9;
+    --lavender: #8BE9FD;
+    --green: #50FA7B;
+    --orange: #FFB86C;
+    --text1: #F8F8F2;
+    --text2: #6272A4;
+    --text3: #6272A4;
+    --text4: #44475A;
+    --bg-color1: #282A36;
+    --bg-color2: #44475A;
 }
 * {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text1);
     font-weight: 600;
     font-family: "JetBrainsMono NFP";
 }
 .yasb-bar {
     background-color: var(--bg-color1);
-    border-radius: 8px;
-    border: 1px solid var(--bg-color2);
+    border-radius: 0px;
+    border: none;
 }
 /* Global styles for ToolTip */
 .tooltip {
@@ -111,7 +114,7 @@ For more information about configuration options, please visit the Wiki https://
     outline: none;
 }
 .widget {
-    padding: 0 12px;
+    padding: 0 5px;
     margin: 0;
 }
 .icon {
@@ -120,35 +123,121 @@ For more information about configuration options, please visit the Wiki https://
 .widget .label {
     padding: 0px 2px;
 }
-.komorebi-active-layout {
-    padding: 0
+/* Separator widgets */
+.sep-audio,
+.sep-window,
+.sep-updates,
+.sep-hardware,
+.sep-clock,
+.sep-tray {
+    padding: 0 5px;
 }
-.komorebi-workspaces .offline-status {
-    color: var(--text4);
+.sep-audio .label,
+.sep-window .label,
+.sep-updates .label,
+.sep-hardware .label,
+.sep-clock .label,
+.sep-tray .label {
+    font-size: 13px;
+}
+.sep-audio .label {
+    color: var(--lavender);
+}
+.sep-window .label {
+    color: var(--green);
+}
+.sep-updates .label {
+    color: var(--yellow);
+}
+.sep-hardware .label {
+    color: var(--blue);
+}
+.sep-clock .label {
+    color: var(--text1);
+}
+.sep-tray .label {
+    color: var(--text1);
+}
+/* Active window widget - compact */
+.active-window-widget {
+    padding: 0 5px;
+}
+.active-window-widget .widget-container .icon {
+    font-size: 14px;
+    padding: 0 0px;
+}
+.active-window-widget .widget-container .label {
+    padding: 0 0px;
     font-size: 12px;
-    padding: 0 0 0 4px;
-    font-weight: 600;
 }
-.komorebi-workspaces .ws-btn {
+/* Grouper toggle icon - purple like waybar hardware button */
+.systeminfo-grouper .grouper-button {
+    color: var(--blue);
+    background-color: var(--bg-color1);
+    padding: 0 2px;
+    font-size: 12px;
+}
+
+/* GlazeWM Workspaces - matching waybar style */
+.glazewm-workspaces {
+    border-right: none;
+}
+.glazewm-workspaces .ws-btn {
     border: none;
-    background-color: var(--text4);
-    margin: 0 3px;
-    height: 9px;
-    width: 9px;
-    border-radius: 4px;
+    background-color: transparent;
+    color: var(--text1);
+    font-size: 15px;
+    padding: 5px 13px;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
 }
-.komorebi-workspaces .ws-btn:hover {
+.glazewm-workspaces .ws-btn:hover {
+    background-color: var(--bg-color2);
+    border-bottom: 2px solid var(--text1);
+}
+.glazewm-workspaces .ws-btn.empty {
     color: var(--text2);
 }
-.komorebi-workspaces .ws-btn.populated {
-    background-color: var(--lavender);
+.glazewm-workspaces .ws-btn.active_populated,
+.glazewm-workspaces .ws-btn.active_empty,
+.glazewm-workspaces .ws-btn.focused {
+    color: var(--green);
+    background-color: var(--bg-color2);
+    border-bottom: 2px solid var(--green);
 }
-.komorebi-workspaces .ws-btn.active {
-    background-color: var(--blue);
-    width: 36px;
+.glazewm-workspaces .ws-btn.populated {
+    color: var(--text1);
+}
+.glazewm-workspaces .ws-btn.urgent {
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+}
+
+/* CPU widget - red like waybar */
+.cpu-widget .icon,
+.cpu-widget .label {
+    color: var(--red);
+}
+
+/* Memory widget - purple like waybar */
+.memory-widget .icon,
+.memory-widget .label {
+    color: var(--blue);
+}
+
+/* Update check widget - yellow like waybar */
+.update-check-widget .icon,
+.update-check-widget .label {
+    color: var(--yellow);
+}
+
+/* Clock widget */
+.clock-widget .label {
+    color: var(--text1);
 }
 .power-menu-widget .label {
-    color: #f38ba8;
+    color: var(--red);
     font-size: 13px;
 }
 .power-menu-popup {
@@ -166,8 +255,8 @@ For more information about configuration options, please visit the Wiki https://
     border: 8px solid rgba(255, 255, 255, 0)
 }
 .power-menu-popup .button.hover {
-    background-color: #134c96;
-    border: 8px solid #134c96;
+    background-color: #44475A;
+    border: 8px solid #44475A;
 }
 .power-menu-popup .button .label {
     font-size: 13px;
@@ -192,19 +281,19 @@ For more information about configuration options, please visit the Wiki https://
 .power-menu-popup .profile-info .profile-username {
     font-size: 24px;
     font-weight: 600;
-    color: #cdd6f4;
+    color: #F8F8F2;
     margin-top: 0;
     font-family: 'Segoe UI';
 }
 .power-menu-popup .profile-info .profile-account-type {
     font-size: 15px;
-    color: rgba(205, 214, 244, 0.6);
+    color: rgba(248, 248, 242, 0.6);
     margin-top: 8px;
     font-family: 'Segoe UI'
 }
 .power-menu-popup .profile-info .profile-email {
     font-size: 13px;
-    color: rgba(205, 214, 244, 0.4);
+    color: rgba(248, 248, 242, 0.4);
     margin-top: 4px;
     font-family: 'Segoe UI'
 }
@@ -214,26 +303,26 @@ For more information about configuration options, please visit the Wiki https://
 .power-menu-overlay .uptime {
     font-size: 16px;
     margin-bottom: 20px;
-    color: #9ea2b4;
+    color: #6272A4;
     font-weight: 600;
 }
 .microphone-widget {
-    padding: 0 6px 0 6px;
+    padding: 0 3px 0 3px;
 }
 .microphone-widget .icon {
     font-size: 18px;
 }
 .microphone-widget .icon {
-    color: var(--mauve);
+    color: var(--lavender);
 }
 .volume-widget .icon {
     font-size: 17px;
-    color: var(--blue);
+    color: var(--lavender);
     margin: 0px 2px 0 0;
 }
 .open-meteo-widget,
 .volume-widget {
-    padding: 0 6px;
+    padding: 0 3px;
 }
 .open-meteo-widget .icon {
     font-size: 18px;
@@ -378,22 +467,22 @@ For more information about configuration options, please visit the Wiki https://
 /* search dialog */
 .open-meteo-card .search-input {
     padding: 8px 12px;
-    border: 1px solid #5e6070;
+    border: 1px solid #6272A4;
     border-radius: 6px;
-    background-color: rgba(17, 17, 27, 0.1);
-    color: #cdd6f4;
+    background-color: rgba(40, 42, 54, 0.1);
+    color: #F8F8F2;
     font-family: "Segoe UI";
     font-size: 14px;
 }
 .open-meteo-card .search-input:focus {
-    border: 1px solid #89b4fa;
-    background-color: rgba(17, 17, 27, 0.2);
+    border: 1px solid #BD93D9;
+    background-color: rgba(40, 42, 54, 0.2);
 }
 .open-meteo-card .search-results {
-    border: 1px solid #45475a00;
+    border: 1px solid #44475a00;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0);
-    color: #cbced8;
+    color: #F8F8F2;
     font-size: 13px;
     font-family: "Segoe UI";
 }
@@ -446,16 +535,16 @@ For more information about configuration options, please visit the Wiki https://
 }
 .media-menu .artist {
     font-size: 13px;
-    color: #6c7086;
+    color: #6272A4;
     margin-top: 0px;
     margin-bottom: 8px;
 }
 .media-menu .source {
     font-size: 11px;
-    color: #000;
+    color: #282A36;
     font-weight: normal;
     border-radius: 3px;
-    background-color: #bac2de;
+    background-color: #6272A4;
     padding: 2px 4px;
 
 }
@@ -507,7 +596,7 @@ For more information about configuration options, please visit the Wiki https://
 .media-menu .playback-time {
     font-size: 13px;
     font-family: 'Segoe UI';
-    color: #7f849c;
+    color: #6272A4;
     margin-top: 20px;
     min-width: 100px;
 }
@@ -535,7 +624,7 @@ For more information about configuration options, please visit the Wiki https://
     height: 4px;
 }
 .home-widget {
-    padding: 0 4px 0 12px;
+    padding: 0 4px 0 5px;
 }
 .home-widget .icon {
     color: var(--lavender);
@@ -570,7 +659,7 @@ For more information about configuration options, please visit the Wiki https://
     font-size: 14px;
 }
 .notification-widget .icon.new-notification {
-    color: var(--blue);
+    color: var(--orange);
 }
 
 .calendar {
@@ -589,8 +678,8 @@ For more information about configuration options, please visit the Wiki https://
     outline: none;
 }
 .calendar .calendar-table::item:selected {
-    color: #000000;
-    background-color: var(--blue);
+    color: #282A36;
+    background-color: var(--green);
     border-radius: 10px;
 }
 .calendar .day-label {
