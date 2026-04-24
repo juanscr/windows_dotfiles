@@ -29,7 +29,6 @@ bars:
       always_on_top: false
       windows_app_bar: true
       hide_on_fullscreen: true
-      hide_on_maximized: true
     dimensions:
       width: "100%"
       height: 32

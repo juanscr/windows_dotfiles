@@ -307,7 +307,7 @@ For more information about configuration options, please visit the Wiki https://
     font-weight: 600;
 }
 .microphone-widget {
-    padding: 0 3px 0 3px;
+    padding: 0 8px 0 3px;
 }
 .microphone-widget .icon {
     font-size: 18px;
