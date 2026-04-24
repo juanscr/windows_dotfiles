@@ -47,6 +47,7 @@ be installed `zig` and `node` for treesitter support. `winget install --id=Neovi
 - `git`: Version control. `winget install --id=Git.Git -e`
 - `eza`: Ls but in Rust. `winget install --id=eza-community.eza -e`
 - `glazewm`: Tilling window management for windows. `winget install --id=glzr-io.glazewm -e`
+- `yasb`: Status bar for windows. `winget install AmN.yasb`
 - `autohotkey`: Automate scripts and bind to keybinds. `winget install --id=AutoHotkey.AutoHotkey -e`
 - `grep`: Print lines matching a pattern. `winget install --id=Neovim.Neovim -e`
 - `Powershell`: to replace Windows Powerhsell as it is a much faster and
