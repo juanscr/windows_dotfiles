@@ -5,6 +5,8 @@ documentation, you'll find everything that I did and all my dotfiles for my
 Windows installation in order to make it as similar as possible for maximizing
 performance.
 
+![desktop](./Pictures/assets/desktop.png)
+
 ## Setup
 To setup my dotfiles, first clone the bare repository in the desired place.
 
