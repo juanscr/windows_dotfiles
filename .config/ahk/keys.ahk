@@ -1,3 +1,5 @@
+#Requires AutoHotkey v2.0+
+
 ; ===== Execute applications ===== ;
 #Enter::Run "pwsh.exe -WorkingDirectory ~"
 #i::Run "msedge.exe"
@@ -9,7 +11,8 @@
 ~LWin::vkE8
 
 ; Turn on glazewm + yasb
-#>^g::{
+#>^g::
+{
   Run "glazewm.exe start"
-  Run 'pwsh.exe -WindowStyle Hidden -File "' A_UserProfile '\.config\yasb\launch-yasb.ps1"'
+  Run 'pwsh.exe -WindowStyle Hidden -File "$Env:Userprofile\.config\yasb\launch-yasb.ps1"'
 }
